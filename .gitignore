@@ -1,0 +1,20 @@
+### OS files
+.DS_Store
+Thumbs.db
+
+### Editor/IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+### Logs
+*.log
+
+### Build artifacts
+dist/
+build/
+out/
+
+### Node dependencies
+node_modules/
