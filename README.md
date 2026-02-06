@@ -1,19 +1,18 @@
 # The-Book-Basqet-Frontend
 
-Static front-end assets for The Book Basqet storefront and admin pages.
+React front-end for The Book Basqet storefront and admin portal.
 
 ## Pages
-- `index.html` for the storefront landing page.
-- `shop.html` for browsing products.
-- `categories.html` for category browsing.
-- `about.html`, `contact.html`, `privacy.html`, and `terms.html` for informational pages.
-- `login.html` and `register.html` for authentication views.
-- `admin-login.html` and `admin-dashboard.html` for admin access.
+- Storefront: home, shop, categories, about, contact, privacy, terms.
+- Auth: login and register for shoppers.
+- Admin: login and dashboard for inventory, categories, and orders.
 
-## Assets
-- Global styles live in `style.css` and `css/`.
-- Global scripts live in `script.js` and `js/`.
-- Admin styles and scripts live in `admin.css` and `admin.js`.
+## Scripts
+- `npm run dev` to start the local development server.
+- `npm run build` to create a production build.
+- `npm run preview` to preview the production build.
 
-## Local preview
-Open any HTML file directly in a browser, or serve the directory with a simple static server of your choice.
+## Environment
+Set `VITE_API_BASE_URL` to point at the Book Basqet API (defaults to `https://localhost:5001/api`). Create a `.env` file if needed:
+
+```\nVITE_API_BASE_URL=https://localhost:5001/api\n```
