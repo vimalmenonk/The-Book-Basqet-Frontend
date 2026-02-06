@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Books Online | Book Basqet</title>
+  <meta name="description" content="Shop all books by category at Book Basqet. Find fiction, non-fiction, manga, comics, and novels in one place." />
+  <meta name="keywords" content="shop books, buy novels, manga store, comics online, Book Basqet" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bookbasqet.com/shop.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shop Books Online | Book Basqet" />
+  <meta property="og:description" content="Browse and shop curated books by category at Book Basqet." />
+  <meta property="og:url" content="https://bookbasqet.com/shop.html" />
+  <meta property="og:site_name" content="Book Basqet" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Shop Books Online | Book Basqet" />
+  <meta name="twitter:description" content="Browse and shop curated books by category at Book Basqet." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar container">
+    <a class="logo" href="index.html"><i class="fa-solid fa-book-open-reader"></i> Book Basqet</a>
+    <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div id="authActions" class="auth-actions"></div>
+    <a class="cart-pill" href="#cart"><i class="fa-solid fa-cart-shopping"></i> <span id="cartCount">0</span></a>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <h1>Shop All Books</h1>
+    <div class="shop-toolbar">
+      <input type="search" id="searchInput" placeholder="Search by title or author..." aria-label="Search books" />
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="All">All Categories</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Non-Fiction">Non-Fiction</option>
+        <option value="Manga">Manga</option>
+        <option value="Comics">Comics</option>
+        <option value="Novels">Novels</option>
+      </select>
+    </div>
+    <div id="bookGrid" class="card-grid"></div>
+
+    <section id="cart" class="cart-panel">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p class="cart-total">Total: $<span id="cartTotal">0.00</span></p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><h3>Book Basqet</h3><p>Find your perfect read today.</p></div>
+    <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    <div><h4>Connect</h4><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div>
+  </div>
+  <p class="copyright">© <span id="year"></span> Book Basqet. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

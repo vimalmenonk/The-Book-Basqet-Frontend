@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Book Basqet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <h1>Book Basqet</h1>
+      <p class="role-label">Admin Dashboard</p>
+      <nav>
+        <button class="tab-button active" data-tab="books">Books</button>
+        <button class="tab-button" data-tab="categories">Categories</button>
+        <button class="tab-button" data-tab="orders">Orders</button>
+      </nav>
+      <button id="adminLogoutBtn" class="btn-ghost">Logout</button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h2 id="dashboardTitle">Books</h2>
+          <p id="adminWelcomeText">Manage your bookstore inventory efficiently.</p>
+        </div>
+      </header>
+
+      <p id="dashboardMessage" class="form-message" aria-live="polite"></p>
+
+      <section id="tab-books" class="tab-panel active">
+        <div class="panel-grid">
+          <article class="card">
+            <h3>Add / Edit Book</h3>
+            <form id="bookForm" class="admin-form" novalidate>
+              <input type="hidden" id="bookId" />
+              <label for="bookTitle">Title</label>
+              <input id="bookTitle" required />
+
+              <label for="bookAuthor">Author</label>
+              <input id="bookAuthor" required />
+
+              <label for="bookIsbn">ISBN</label>
+              <input id="bookIsbn" required />
+
+              <label for="bookDescription">Description</label>
+              <textarea id="bookDescription" rows="3"></textarea>
+
+              <div class="input-row">
+                <div>
+                  <label for="bookPrice">Price</label>
+                  <input id="bookPrice" type="number" step="0.01" min="0.01" required />
+                </div>
+                <div>
+                  <label for="bookStock">Stock</label>
+                  <input id="bookStock" type="number" min="0" required />
+                </div>
+              </div>
+
+              <label for="bookImage">Cover Image URL</label>
+              <input id="bookImage" type="url" />
+
+              <label for="bookCategory">Category</label>
+              <select id="bookCategory" required></select>
+
+              <div class="button-row">
+                <button type="submit" class="btn-primary">Save Book</button>
+                <button type="button" id="bookFormReset" class="btn-ghost">Cancel Edit</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="card table-card">
+            <h3>All Books</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Category</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="booksTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tab-categories" class="tab-panel">
+        <div class="panel-grid">
+          <article class="card">
+            <h3>Add / Edit Category</h3>
+            <form id="categoryForm" class="admin-form" novalidate>
+              <input type="hidden" id="categoryId" />
+              <label for="categoryName">Name</label>
+              <input id="categoryName" required />
+
+              <label for="categoryDescription">Description</label>
+              <textarea id="categoryDescription" rows="4"></textarea>
+
+              <div class="button-row">
+                <button type="submit" class="btn-primary">Save Category</button>
+                <button type="button" id="categoryFormReset" class="btn-ghost">Cancel Edit</button>
+              </div>
+            </form>
+          </article>
+
+          <article class="card table-card">
+            <h3>All Categories</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="categoriesTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tab-orders" class="tab-panel">
+        <article class="card table-card">
+          <div class="orders-heading">
+            <h3>All Orders</h3>
+            <button id="refreshOrdersBtn" class="btn-ghost">Refresh</button>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Items</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Book Basqet Account</title>
+  <meta name="description" content="Login to your Book Basqet account to manage your cart, orders, and profile details." />
+  <meta name="keywords" content="Book Basqet login, bookstore account login" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://bookbasqet.com/login.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Login | Book Basqet Account" />
+  <meta property="og:description" content="Secure login page for your Book Basqet account." />
+  <meta property="og:url" content="https://bookbasqet.com/login.html" />
+  <meta property="og:site_name" content="Book Basqet" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Login | Book Basqet Account" />
+  <meta name="twitter:description" content="Secure login page for your Book Basqet account." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8Hjv+QCMYg1Cdm9m+e2Fs7vXc+Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html"><i class="fa-solid fa-book-open-reader"></i> Book Basqet</a>
+      <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div id="authActions" class="auth-actions"></div>
+      <a class="cart-pill" href="shop.html#cart"><i class="fa-solid fa-cart-shopping"></i> <span id="cartCount">0</span></a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container auth-shell">
+      <section class="auth-card">
+        <p class="eyebrow">Welcome Back</p>
+        <h1>Login to Book Basqet</h1>
+        <p>Sign in to manage your cart and checkout faster.</p>
+        <form id="loginForm" class="auth-form" novalidate>
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" name="password" type="password" required minlength="6" autocomplete="current-password" placeholder="Enter your password" />
+
+          <button class="btn btn-primary" type="submit">Login</button>
+          <p id="loginMsg" class="form-message" aria-live="polite"></p>
+        </form>
+        <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="copyright">© <span id="year"></span> Book Basqet. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

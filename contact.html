@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Book Basqet | Customer Support</title>
+  <meta name="description" content="Contact Book Basqet for support, order help, and general inquiries about our bookstore services." />
+  <meta name="keywords" content="contact Book Basqet, bookstore support, customer service" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bookbasqet.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Book Basqet | Customer Support" />
+  <meta property="og:description" content="Reach the Book Basqet team for support and inquiries." />
+  <meta property="og:url" content="https://bookbasqet.com/contact.html" />
+  <meta property="og:site_name" content="Book Basqet" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact Book Basqet | Customer Support" />
+  <meta name="twitter:description" content="Reach the Book Basqet team for support and inquiries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header"><nav class="navbar container"><a class="logo" href="index.html"><i class="fa-solid fa-book-open-reader"></i> Book Basqet</a><button class="menu-toggle"><i class="fa-solid fa-bars"></i></button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="categories.html">Categories</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="active">Contact</a></li></ul><div id="authActions" class="auth-actions"></div><a class="cart-pill" href="shop.html#cart"><i class="fa-solid fa-cart-shopping"></i> <span id="cartCount">0</span></a></nav></header>
+<main class="section">
+  <div class="container contact-grid">
+    <section>
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Send us your message and our team will respond shortly.</p>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+        <p id="formMsg"></p>
+      </form>
+    </section>
+    <aside class="contact-info">
+      <h2>Business Info</h2>
+      <p><i class="fa-solid fa-envelope"></i> hello@bookbasqet.com</p>
+      <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+      <div class="map-placeholder">Google Maps Placeholder</div>
+    </aside>
+  </div>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div><h3>Book Basqet</h3><p>Your reading partner.</p></div><div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><div><h4>Social</h4><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div></div><p class="copyright">© <span id="year"></span> Book Basqet. All rights reserved.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

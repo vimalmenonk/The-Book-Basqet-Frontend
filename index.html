@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Basqet | Discover Your Next Favorite Book</title>
+  <meta name="description" content="Discover books, novels, manga, comics, and storybooks at Book Basqet with curated picks and fast delivery." />
+  <meta name="keywords" content="Book Basqet, online bookstore, buy books online, novels, manga, comics, storybooks" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bookbasqet.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Book Basqet | Discover Your Next Favorite Book" />
+  <meta property="og:description" content="Explore curated books, novels, manga, and comics for every reader at Book Basqet." />
+  <meta property="og:url" content="https://bookbasqet.com/" />
+  <meta property="og:site_name" content="Book Basqet" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book Basqet | Discover Your Next Favorite Book" />
+  <meta name="twitter:description" content="Explore curated books, novels, manga, and comics for every reader at Book Basqet." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8Hjv+QCMYg1Cdm9m+e2Fs7vXc+Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html"><i class="fa-solid fa-book-open-reader"></i> Book Basqet</a>
+      <button class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div id="authActions" class="auth-actions"></div>
+      <a class="cart-pill" href="shop.html#cart"><i class="fa-solid fa-cart-shopping"></i> <span id="cartCount">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Welcome to Book Basqet</p>
+          <h1>Discover Your Next Favorite Book</h1>
+          <p>Explore thousands of books, novels, manga, comics, and storybooks curated for every kind of reader.</p>
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
+        </div>
+        <div class="hero-image-card">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80" alt="Books stacked on a shelf" loading="lazy" decoding="async" width="900" height="600" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured">
+      <div class="container">
+        <h2>Featured Books</h2>
+        <div class="card-grid" id="featuredBooks"></div>
+      </div>
+    </section>
+
+    <section class="section alt-bg">
+      <div class="container">
+        <h2>Browse Categories</h2>
+        <div class="category-chips">
+          <a href="shop.html?category=Fiction">Fiction</a>
+          <a href="shop.html?category=Non-Fiction">Non-Fiction</a>
+          <a href="shop.html?category=Manga">Manga</a>
+          <a href="shop.html?category=Comics">Comics</a>
+          <a href="shop.html?category=Novels">Novels</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why Choose Book Basqet</h2>
+        <div class="features-grid">
+          <article><i class="fa-solid fa-truck-fast"></i><h3>Fast Delivery</h3><p>Get your favorite reads delivered quickly and safely to your doorstep.</p></article>
+          <article><i class="fa-solid fa-tags"></i><h3>Great Prices</h3><p>Enjoy affordable prices, seasonal discounts, and special bundle offers.</p></article>
+          <article><i class="fa-solid fa-star"></i><h3>Curated Picks</h3><p>Handpicked collections from bestsellers to hidden gems.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-bg">
+      <div class="container">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonials-grid">
+          <blockquote>“Book Basqet made me fall in love with reading again. Amazing selection!” <cite>— Ayesha K.</cite></blockquote>
+          <blockquote>“I found rare manga volumes here that I couldn’t find elsewhere.” <cite>— Daniel T.</cite></blockquote>
+          <blockquote>“Smooth checkout, fast shipping, and beautiful packaging.” <cite>— Priya M.</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container newsletter">
+        <h2>Join Our Newsletter</h2>
+        <p>Get weekly recommendations and exclusive discounts.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" aria-label="Email" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <small id="newsletterMsg"></small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Book Basqet</h3>
+        <p>Your online destination for books, novels, manga, comics, and storybooks.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Book Basqet. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
